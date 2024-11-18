@@ -26,16 +26,15 @@ const CarList = () => {
 
   return (
     <div>
-      <Navbar />
-      <div className="container mx-auto p-4">
+      <div className="container w-full mx-auto p-4">
         <input
           type="text"
           placeholder="Search"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="block w-full p-2 border mb-4"
+          className='bg-white rounded-lg border my-2 px-3 w-full'
         />
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-3 gap-6">
           {filteredCars.map((car) => (
             <CarCard key={car.id} car={car} onClick={() => navigate(`/cars/${car.id}`)} />
           ))}
